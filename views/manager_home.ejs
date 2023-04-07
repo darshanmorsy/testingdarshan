@@ -1,0 +1,35 @@
+
+<%- include('header') %>
+<div class="pcoded-main-container bg-transparent">
+    <div class="card col-xl-6 p-4 mx-3">
+        <h4>add admins</h4>
+        <%if(flash.success && flash.success.length > 0){%>
+            <div class="alert alert-success ">
+              <%=flash.success%>
+            </div>
+            <%}%>
+                    <form method="post" action="/registerProcess">
+                    
+                        <div class="form-floating">
+                            <label class="floatingInput mt-2">Username</label>
+                            <input type="text" class="form-control" placeholder="Username" id="Uname" name="name">
+                        </div>
+                        <div class="form-floating">
+                            <label class="floatingInput mt-2">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Email Address" id="Uemail" name="email">
+                        </div>
+                        <div class="form-floating">
+                            <label class="floatingInput mt-2">Create Password</label>
+                            <input type="Password" class="form-control"  placeholder="Create Password" id="Ucreatepass" name="password">
+                        </div>
+                        <div class="form-floating">
+                            <label class="floatingInput mt-2">Confirm Password</label>
+                            <input type="Password" class="form-control"  placeholder="Confirm Password" id="Uconpass" name="cpassword">
+                        </div>
+                        <input type="submit" class="submit btn btn-outline-primary mt-3" onclick="return SignUp()" value="Sign Up" name="submit">
+                        <p class="signin mt-2">Already have an account? <a href="#" onclick="return toggleForm();">Sign In.</a></p>
+                       
+                    </form>
+                    </div>
+</div>
+<%- include('footer') %>

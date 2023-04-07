@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>eNno Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/profile_css.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: eNno
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body style="background-color: #ecf0f5;">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">
+          <img src="" alt="">
+
+        </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="/student/logout">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <div class=" mt-5 pt-5 col-12 col-xxl-12 col-xl-12" style="margin-right:210px">
+    <div class="main-body">
+      <div class="row gutters-sm">
+        <div class="col-md-4 mb-1">
+          <div class="card mb-3">
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center text-center">
+                <img src="<%=profile.avatar%>" alt="Admin" class="rounded-circle" width="150">
+                <div class="mt-3">
+                  <h4>
+                    <%=profile.name%>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between py-3 align-items-center flex-wrap">
+                <h4>parents info</h4>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                name : <%=profile.father_name%>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                mobile no : <%=profile.father_phone%>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                qualification : <%=profile.edu_qualification_father%>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card mb-2">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">GR ID</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <%=profile.grid%>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Full Name</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <%=profile.name%>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Email</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <%=profile.email%>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Mobile</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <%=profile.phone%>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">course</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <%=profile.cource%>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Address</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <%=profile.address%>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Gender</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <%=profile.gender%>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">date of birth</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <%=profile.dob%>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- fees -->
+
+      <div class="body" id="ddd" style="">
+
+        <div id="invoiceholder">
+
+          <div id="headerimage"></div>
+          <div id="invoice" class="effect2">
+
+            <div id="invoice-top" style="display: flex; justify-content: center; align-items: center;">
+
+              <img src="/images/MME LOGO1 (1) copy.png" height="50px" alt="">
+
+              <div class="info">
+                <h2 style="font-size: 25px; color: #c7242e;" class="mt-2"> Multimedia <span
+                    style="color: #135597;">&</span> Education</h2>
+              </div><!--End Info-->
+            </div><!--End InvoiceTop-->
+
+
+
+            <div id="invoice-mid">
+
+              <div class="clientlogo"></div>
+              <div class="info">
+                <h2>
+                  <%=profile.name %>
+                </h2>
+                <p>
+                  <%=profile.email%></br>
+                    555-555-5555</br>
+              </div>
+
+              <div id="project">
+                <h2>Project Description</h2>
+                <p>Proin cursus, dui non tincidunt elementum, tortor ex feugiat enim, at elementum enim quam vel purus.
+                  Curabitur semper malesuada urna ut suscipit.</p>
+              </div>
+
+            </div><!--End Invoice Mid-->
+
+            <div id="invoice-bot">
+
+              <div id="table">
+                <table>
+                  <tr class="tabletitle">
+                    <td class="item">
+                      <h2>Item Description</h2>
+                    </td>
+                    <td class="Rate"></td>
+                    <td class="subtotal"></td>
+                    <td class="subtotal">
+                      <h2>Sub-total</h2>
+                    </td>
+                  </tr>
+
+                  <tr class="service">
+                    <td class="tableitem" colspan="3">
+                      <p class="itemtext">fees paid</p>
+                    </td>
+
+                    <td class="tableitem">
+                      <p class="itemtext">
+                        <%=profile.paid_fees%>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr class="tabletitle">
+                    <td></td>
+                    <td></td>
+                    <td class="Rate">
+                      <h2>Total :</h2>
+                    </td>
+                    <td class="payment">
+                      <h2>
+                        <%=profile.paid_fees%>
+                      </h2>
+                    </td>
+                  </tr>
+
+                </table>
+              </div><!--End Table-->
+
+            </div><!--End InvoiceBot-->
+          </div><!--End Invoice-->
+        </div><!-- End Invoice Holder-->
+
+      </div>
+
+
+      <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,900,700,500,300,100);
+
+        * {
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        .body {
+          background: #e0e0e0;
+          font-family: "Roboto", sans-serif;
+          background-image: url("");
+          background-repeat: repeat-y;
+          background-size: 100%;
+        }
+
+        ::selection {
+          background: #f31544;
+          color: #fff;
+        }
+
+        ::moz-selection {
+          background: #f31544;
+          color: #fff;
+        }
+
+        .body h1 {
+          font-size: 1.5em;
+          color: #222;
+        }
+
+        .body h2 {
+          font-size: 0.9em;
+        }
+
+        .body h3 {
+          font-size: 1.2em;
+          font-weight: 300;
+          line-height: 2em;
+        }
+
+        .body p {
+          font-size: 0.7em;
+          color: #666;
+          line-height: 1.2em;
+        }
+
+        .body #invoiceholder {
+          width: 100%;
+          hieght: 100%;
+          padding-top: 50px;
+        }
+
+        .body #headerimage {
+          z-index: -1;
+          position: relative;
+          top: -50px;
+          height: 350px;
+          background-image: url("http://michaeltruong.ca/images/invoicebg.jpg");
+
+          -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),
+            inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+          -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),
+            inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),
+            inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+          overflow: hidden;
+          background-attachment: fixed;
+          background-size: 1920px 80%;
+          background-position: 50% -90%;
+        }
+
+        .body #invoice {
+          position: relative;
+          top: -290px;
+          margin: 0 auto;
+          width: 700px;
+          background: #fff;
+        }
+
+        [id*="invoice-"] {
+          /* Targets all id with 'col-' */
+          border-bottom: 1px solid #eee;
+          padding: 30px;
+        }
+
+        .body #invoice-top {
+          min-height: 120px;
+        }
+
+        .body #invoice-mid {
+          min-height: 120px;
+        }
+
+        .body #invoice-bot {
+          min-height: 250px;
+        }
+
+        .body .logo {
+          float: left;
+          height: 60px;
+          width: 60px;
+          /* background: url(/images/MME\ LOGO1\ \(1\).png); */
+          background-size: 60px 60px;
+        }
+
+        .body .clientlogo {
+          float: left;
+          height: 60px;
+          width: 60px;
+          background: url(<%=profile.avatar%>) no-repeat;
+          background-size: 60px 60px;
+          border-radius: 50px;
+        }
+
+        .body .info {
+          display: block;
+          float: left;
+          margin-left: 20px;
+        }
+
+        .body .title {
+          float: right;
+        }
+
+        .body .title p {
+          text-align: right;
+        }
+
+        .body #project {
+          margin-left: 52%;
+        }
+
+        .body table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+
+        .body td {
+          padding: 5px 0 5px 15px;
+          border: 1px solid #eee;
+        }
+
+        .body .tabletitle {
+          padding: 5px;
+          background: #eee;
+        }
+
+        .body .service {
+          border: 1px solid #eee;
+        }
+
+        .body .item {
+          width: 50%;
+        }
+
+        .body .itemtext {
+          font-size: 0.9em;
+        }
+
+        .body #legalcopy {
+          margin-top: 30px;
+        }
+
+        .body form {
+          float: right;
+          margin-top: 30px;
+          text-align: right;
+        }
+
+        .body .effect2 {
+          position: relative;
+        }
+
+        .body .effect2:before,
+        .effect2:after {
+          z-index: -1;
+          position: absolute;
+          content: "";
+          bottom: 15px;
+          left: 10px;
+          width: 50%;
+          top: 80%;
+          max-width: 300px;
+          background: #777;
+          -webkit-box-shadow: 0 15px 10px #777;
+          -moz-box-shadow: 0 15px 10px #777;
+          box-shadow: 0 15px 10px #777;
+          -webkit-transform: rotate(-3deg);
+          -moz-transform: rotate(-3deg);
+          -o-transform: rotate(-3deg);
+          -ms-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+        }
+
+        .body .effect2:after {
+          -webkit-transform: rotate(3deg);
+          -moz-transform: rotate(3deg);
+          -o-transform: rotate(3deg);
+          -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
+          right: 10px;
+          left: auto;
+        }
+
+        .body .legal {
+          width: 70%;
+        }
+      </style>
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/html2pdf.js/0.9.1/html2pdf.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.1/html2pdf.bundle.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    function createPDF() {
+      var element = document.getElementById('ddd');
+      html2pdf(element, {
+        margin: 1,
+        padding: 0,
+        filename: 'myfile.pdf',
+        image: { type: 'jpeg', quality: 2080 },
+        html2canvas: { scale: 2, logging: true },
+        jsPDF: { unit: 'in', format: 'A3', orientation: 'P' },
+        class: createPDF
+      });
+    };
+  </script>
+
+
+</body>
+
+</html>
